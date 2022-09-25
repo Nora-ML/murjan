@@ -1,0 +1,49 @@
+/* .productCat_container{
+    border:1px solid #f5f2f5;
+    width: 80vw ;
+    height:100vh ;
+    position: relative;
+    left: 22vw ;
+    top: -8vh;
+    bottom: 0;
+ */
+/*     .the_cats{
+        //background-color: rgba(235, 241, 57, 0.53);
+        overflow: hidden;
+        width: 20vw !important;
+        height: 100vh !important;
+        position: sticky;
+        left: 79vw !important;
+        top: 0vh !important;
+
+      */   .product_types{
+            margin-right: 1vw;
+            position: absolute;
+            border-radius: 100px;
+            background-size: cover !important;
+            background-repeat: no-repeat;
+            background-position: center;
+            opacity: 0.6;
+            width: 75vw !important;
+            height: 90vh !important;
+            border:  #21190b 1px solid;
+
+            &.image0{
+                //top: 45vh;
+                z-index: 3;
+            }
+            &.image1{
+                //top: 20vh;
+                z-index: 2;
+            }
+            &.image2{
+                //top: -5vh;
+                z-index: 1;
+            }
+        }
+   /*  } */
+/* } */
+
+
+
+  

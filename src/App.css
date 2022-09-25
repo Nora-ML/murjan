@@ -1,38 +1,49 @@
-.App {
-  text-align: center;
+*{
+ box-sizing: border-box;
+ 
+}
+body{
+    margin: 0;
+    /* background-color: #410808; */
+    background-color: #39040a;
+    color:#D6AD60;
+    text-transform: uppercase;
+    overflow-x: hidden;
+    /* width: 100vw;
+    overflow-x: hidden; */
+}
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  border: 1px solid #b48125;
+  -webkit-text-fill-color: #b48125;
+  transition: background-color 5000s ease-in-out 0s;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.special_green_background{
+  background: #070e0b;
+
+  background: radial-gradient(circle, hsla(160, 33%, 4%, 1) 0%, hsla(162, 36%, 11%, 1) 72%, hsla(164, 33%, 9%, 1) 100%);
+
+  background: -moz-radial-gradient(circle, hsla(160, 33%, 4%, 1) 0%, hsla(162, 36%, 11%, 1) 72%, hsla(164, 33%, 9%, 1) 100%);
+
+  background: -webkit-radial-gradient(circle, hsla(160, 33%, 4%, 1) 0%, hsla(162, 36%, 11%, 1) 72%, hsla(164, 33%, 9%, 1) 100%);
+}
+.special_red{
+  background: hsla(0, 78%, 14%, 1);
+
+background: radial-gradient(circle, hsla(0, 78%, 14%, 1) 32%, hsla(10, 100%, 6%, 1) 96%, hsla(357, 76%, 21%, 1) 100%);
+
+background: -moz-radial-gradient(circle, hsla(0, 78%, 14%, 1) 32%, hsla(10, 100%, 6%, 1) 96%, hsla(357, 76%, 21%, 1) 100%);
+
+background: -webkit-radial-gradient(circle, hsla(0, 78%, 14%, 1) 32%, hsla(10, 100%, 6%, 1) 96%, hsla(357, 76%, 21%, 1) 100%);
+
+filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#410808", endColorstr="#1F0500", GradientType=1 );
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}

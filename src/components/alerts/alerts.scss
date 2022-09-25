@@ -1,0 +1,23 @@
+.form_alerts{
+    width: 70% ;
+    
+    .alerts{
+        color: #0f0c29;
+        border-radius: 3px;
+
+        font-size: 16px;
+        font-weight: 600;
+        text-align: center;
+        text-transform: capitalize;
+
+        padding: 1.5vh 0.5vw;
+
+        &.alert_success{
+            background-color: #117859;
+        }
+        &.alert_fail{
+            background-color: #810c0c;
+        }
+    }
+
+}

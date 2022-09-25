@@ -1,0 +1,28 @@
+.landing_container{
+    //display: grid;
+    width: 100vw;
+    top: 0 ;
+    height:300vh;
+    //background-color: transparent;
+    position: relative;
+    background-color: rgba(35, 42, 42, 0.694);
+
+    //grid-template-columns: repeat(5,20vw);
+    //grid-template-rows:10vh 90vh 50vh ;
+    //grid-template-areas: 'a a a a c'  'b b b b c' 'd d d d d';
+
+    .service_container{
+       //background-color: #abedb25c !important;
+        //background-color: transparent;
+        overflow: hidden;
+        width: 100vw !important;
+        //height: 65vh ;
+    }
+    .categories_container{
+        //border:solid 1px rgb(138, 46, 12);
+        //background-color: rgba(131, 72, 66, 0.515);
+        width: 100vw ;
+        //height: 100vh !important;
+    }    
+
+}

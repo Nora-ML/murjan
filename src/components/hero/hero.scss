@@ -1,0 +1,30 @@
+/* .hero_container{
+    //border:solid 1px rgb(138, 46, 12);
+    width: 80vw !important;
+    //height: 100vh !important;
+    width: 80vw !important;
+ */
+    .the_frame{
+        border: #0a0601 3px double;
+        border-radius: 100px;
+    
+        overflow: hidden;
+        text-align: center;
+    
+        width: 75vw !important;
+    
+        margin-left: 2vw;
+    
+        z-index: 2;
+        .hero_main_media{
+             background-size: cover !important;
+             //border-radius: 100px;
+             background-repeat: no-repeat;
+             background-position: center !important;
+             width: 75vw !important;
+    
+         }
+    }
+        
+    
+/* } */

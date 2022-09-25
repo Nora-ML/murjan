@@ -1,0 +1,17 @@
+.loading-wrapper{
+    background-color:#0f0c2992;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100vw;
+    height: 100vh;
+
+    .loading{
+        color: inherit;
+        text-transform: uppercase;
+
+        text-align: center;
+    }
+}
