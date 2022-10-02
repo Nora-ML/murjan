@@ -1,0 +1,102 @@
+.shop_items{
+    //border: royalblue 1px solid;
+    width: 90vw;
+    height: auto;
+
+    position: relative;
+    padding: 2vh 1vh;
+    top: 12vh;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+
+            .shop_item{
+                margin-top: 15vh;
+                //border: #D6AD60 solid 1px;
+                overflow: hidden;
+                opacity: 0;
+
+                //background-color: rgba(21, 55, 2, 0.514);
+
+                width: 25vw;
+                height: 60vh;
+
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                padding: 1vh 1vw;
+
+                &.small{
+                    display: flex;
+                    flex-direction: row;
+                    flex-wrap: wrap;
+                    justify-content: space-between;
+
+
+                    width: 35vw;
+                    height: 55vh;
+                }
+                &.large{
+                    width: 43vw;
+                    height: 73vh;
+                    border: #cbc7bb solid 1px;
+                }
+                .image_wrapper{
+                    width: 21vw;
+                    height: 46vh;
+                   // border: white solid 1px;
+                   box-shadow: 0px 1px 3px 0.5px #ab8e85 ;
+                    overflow: hidden;
+                    &.small{
+                        width: 10vw;
+                        height: 20vh;
+                    }
+                    &.large{
+                        width: 35vw;
+                        height: 60vh;
+
+                       
+                    }
+                    .shop_item-img{
+                       // border: rgb(61, 165, 42) solid 1px;
+                        max-width: 21vw;
+                        width: 21vw;
+                        height: 46vh;
+                        
+                        &.small{
+                            max-width: 10vw;
+                            width: 10vw;
+                            height: 20vh;
+                        }
+                        &.large{
+                            max-width: 40vw;
+                            width: 35vw;
+                            height: 60vh;
+                        }
+                    }
+                }
+
+                .shop_item-details{
+                    width: 20vw;
+                    height: 5vh;
+
+                    opacity: 0;
+                    
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    align-items: center;
+
+                    .shop_item_details-name{
+                        font-size: 20px;
+
+                    }
+                    .shop_item_details-price{
+                        font-size: 20px;
+                    }
+                }
+            }
+}

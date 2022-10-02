@@ -1,16 +1,54 @@
 .landing_container{
-    //display: grid;
-    width: 100vw;
-    top: 0 ;
-    height:300vh;
-    //background-color: transparent;
-    position: relative;
-    background-color: rgba(35, 42, 42, 0.694);
+    border: #ffedd7 solid 1px;
+    background-color: transparent;
 
-    //grid-template-columns: repeat(5,20vw);
-    //grid-template-rows:10vh 90vh 50vh ;
-    //grid-template-areas: 'a a a a c'  'b b b b c' 'd d d d d';
+    position: absolute;
+    top: 10vh;
+    left: 5vw;
+    right: 5vw;
+    width: 90vw;
+   // padding: 0 1vw;
 
+    height:auto;
+
+    display: grid;
+    grid-template-columns: repeat(9,10vw);
+    grid-template-rows: 98vh minmax(100vh,250vh) 85vh 15vh;// 5 pages
+    grid-template-areas:  
+    'a a a a a a a a a '  
+    'b b b b b b b b b ' 
+    'd d d d d d d d d '
+    'e e e e e e e f f '
+    'g g g g g g g g g ';
+
+
+    .gems{
+        grid-area: b;
+
+        background-color: #644b47;
+
+        display: grid;
+        grid-template-columns: repeat(9,10vw);
+        grid-template-rows: 5vh 20vh minmax(100vh,280vh) ;
+        grid-template-areas:
+        ' . . . . . . x x x' 
+        ' q q q q q q x x x' 
+        ' q q q q q q . . .' 
+    }
+
+    .content-2{
+        grid-area: g;
+        height: 150vh;
+        width: 100vw;
+
+        background-color: rgba(161, 211, 254, 0.538);
+        .content__text{
+            font-size: 26px;
+            color: rgba(188, 12, 188, 0.608);
+            padding: 10vh 10vw;
+            line-height: 50px;
+        }
+    }
     .service_container{
        //background-color: #abedb25c !important;
         //background-color: transparent;

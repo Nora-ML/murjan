@@ -1,21 +1,19 @@
 .nav_container {
-    //grid-area: a;
-
-    //border-bottom: 1px solid rgb(13, 28, 24) ;
-    //background-color: #121426;
-    //background-color: aqua;
-    background-color: transparent !important;
-    border-radius: 3px;
-
+    //border: #ffedd7 solid 1px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 
-    width: 76vw !important;
-    height: 8vh !important;
-    padding: 0 10px;
 
-    z-index: 5 !important;
+    width: 90vw;
+    height: 10vh;
+    position: fixed;
+    top: 0vh;
+    left: 5vw;
+    right: 5vw;
+    z-index: 1000;
+    text-align:center;
+    background-color: transparent;
 
     .nav_container-ul{
         padding-inline-start: 0;
@@ -31,12 +29,14 @@
          .nav_container-li{
             text-decoration: none;
             padding: 5px 10px;
-            font-size: 16px;
+            font-size: 18px;
             color: inherit;
             
     
             justify-self: flex-end;
-    
+            &.logo{
+                font-size: 24px;
+            }
             .search_icon{
                 position: absolute;
                 top: -0.8vh;

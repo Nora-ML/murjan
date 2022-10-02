@@ -1,0 +1,19 @@
+.hero_container{
+    grid-area: a;
+    height: 98vh;
+    width: 90vw;
+    //padding: 0 1vw;
+    position: relative;
+ 
+    .hero_video{
+      //  border: 1px solid #D6AD60;
+        height: 110vh;
+        width: 90vw;
+        scale: 1;
+        object-fit:cover;  
+    }
+
+}
+        
+    
+

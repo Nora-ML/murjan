@@ -1,0 +1,41 @@
+.shop_nav_container {
+    border: 1px orange solid;
+
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+
+    //width: 100vw;
+    height: 5vh;
+
+    top: 10vh;
+    left: 0vw;
+    right: 0vw;
+    z-index: 1000;
+    text-align:center;
+    background-color: #FFFDFA;
+
+    .shop_nav_container-ul{
+        padding-inline-start: 0;
+        padding-inline-end: 0;
+        list-style: none;
+        
+        height: 5vh;
+        display: flex;
+        flex-direction: row; 
+    
+         .shop_nav_container-li{
+            text-decoration: none;
+            padding: 5px 10px;
+            font-size: 18px;
+            color: inherit;
+    
+            justify-self: flex-end;
+            &.logo{
+                font-size: 24px;
+            }
+        }
+    }
+}

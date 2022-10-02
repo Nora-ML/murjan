@@ -1,0 +1,23 @@
+.collection_section-header-container{
+    grid-area: x;
+    //border: rgb(16, 1, 1) 1px solid;
+
+    //z-index: 10;
+
+    padding: 20px 10px;
+    width:25vw ;
+    height:auto;
+    
+    //overflow: hidden;
+
+    .collection_section_header{
+        color:inherit;
+        font-size: 35px; 
+        text-align: center;
+        opacity: 1;
+        
+        position: absolute;
+
+        width: 100%;          
+    }
+}
