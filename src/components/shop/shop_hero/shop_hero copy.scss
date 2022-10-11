@@ -1,0 +1,152 @@
+.shop_hero_container{
+    //background-color: azure;
+    width: 100%;
+    max-height: 75vh;
+    height: auto;
+
+    padding: 10% 8%;
+    position: relative;
+    top: 10vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    .shop_subheader_container{
+       //background-color: beige;
+        position: relative;
+
+        overflow: hidden;
+        width: auto;
+        height: 10vh;
+        padding: 0% 1%;
+
+        &::after{
+            content:"";
+            position: absolute;
+            background-color:#ebdbc4;
+            //background-color:#82ef7c;
+            width: 100%;
+            height: 105%;
+            top: 0;
+            left: 0;
+                       
+            animation-name: reveal;
+            animation-duration: 1s;
+            animation-fill-mode: forwards;
+            animation-delay: 0.6s;
+        }
+
+        .shop_subheader{
+            font-size: 40px;
+            font-weight: 400;
+            letter-spacing: -0.3rem;
+  
+            margin-block-start: 1%;
+            margin-block-end: 1%;
+
+            animation-name: upNscale;
+            animation-duration: 1.2s;
+            animation-delay: 0.2;
+            animation-fill-mode: forwards;
+
+            @media screen and (max-width: 1201px) {
+                font-size: 37px;
+               
+            }
+            @media screen and (max-width: 1025px) {
+                font-size: 34px;
+               
+            }
+            @media screen and (max-width: 770px) {
+                font-size: 31px;
+                letter-spacing: -0.2rem;
+              
+            }
+            @media screen and (max-width: 480px) {
+                font-size: 28px;
+            
+                letter-spacing: -0.2rem;
+            }
+
+        }
+    }
+  
+    .shop_header_container{
+      // background-color: beige;
+        overflow: hidden;
+        position: relative;
+        width: auto;
+        height: 20vh;
+        padding: 0% 1%;
+
+        margin-top: 2vh;
+
+        &::after{
+            content: "";
+            
+            position: absolute;
+           // bottom:-10;
+            top: 0;
+           // background-color: aquamarine;
+            background-color:#ebdbc4;
+            left: 0;
+            width: 105%;
+            height: 105%;
+
+            animation-name: reveal;
+            animation-duration: 1.2s;
+            animation-delay: 0.2;
+            animation-fill-mode: forwards;
+        }
+
+        .shop_header{
+
+            font-size: 120px;
+            font-weight: 400;
+            letter-spacing: -1rem;
+            word-spacing: 4rem;
+    
+            margin-block-start: 1%;
+            margin-block-end: 1%;
+
+            animation-name: upNscale;
+            animation-duration: 1.2s;
+            //animation-delay: 0.2;
+            animation-fill-mode: forwards;
+
+           
+           //transform: translate(0%,100%);
+
+            @media screen and (max-width: 1201px) {
+                font-size: 110px;
+                word-spacing: 3rem;
+            }
+            @media screen and (max-width: 1025px) {
+                font-size: 95px;
+                word-spacing: 3rem;
+            }
+            @media screen and (max-width: 770px) {
+                font-size: 80px;
+                letter-spacing: -0.4rem;
+                word-spacing: 1.5rem;
+            }
+            @media screen and (max-width: 480px) {
+                font-size: 45px;
+                word-spacing: 1rem;
+                letter-spacing: -0.4rem;
+            }
+
+        }
+    }
+
+}
+@keyframes reveal {
+    0%{clip-path: inset(0% 0% 0% 0%);}
+    100%{clip-path: inset(100% 0% 0% 0%);}
+}
+@keyframes upNscale {
+    0%{scale:1.2;transform: translate(10%,100%);}
+    100%{scale:1;transform: translate(1%,0%);}
+}
+

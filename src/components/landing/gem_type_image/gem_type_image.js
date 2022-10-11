@@ -1,10 +1,11 @@
 import React,{useRef,useEffect, useLayoutEffect} from "react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
-import image from "../../../images/bangles1_mix.jpg";
-import image1 from "../../../images/pendant1.jpg";
-import image3 from "../../../images/ring1_silver.jpg";
-import image2 from "../../../images/band1.jpg";
+import image from "../../../images/bangle_1(1).png";
+import image1 from "../../../images/earing_1(1).png";
+import image2 from "../../../images/bangles_2(1).png";
+import image3 from "../../../images/necklace_1(2).png";
+import image4 from "../../../images/necklace_3(2).png";
 import "./gem_type_image.scss"
 gsap.registerPlugin(ScrollTrigger);
 

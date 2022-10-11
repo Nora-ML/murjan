@@ -1,0 +1,36 @@
+.product_order_container{
+    //background-color: rgb(197, 230, 193);
+    
+    text-transform: capitalize;
+    width: 40vw;
+    height: 90vh;
+    top: 10vh;
+    left: 55vw;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+
+
+    
+    & .product_details{
+        //background-color: #ffedd759;
+        width: 100%;
+        margin-top: 5vh;
+
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .product_enquiry{
+        height: 5vh;
+        .collection-name{
+            font-size: 22px;
+            margin-block-start: 5px;
+            margin-block-end: 5px;
+        }
+    }
+}

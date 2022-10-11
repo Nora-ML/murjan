@@ -1,0 +1,34 @@
+.detailed_page_container{
+    height: 100vh;
+    width: 100vw;
+
+    top: 100vh;
+    position: absolute;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    .item_details{
+        width: 50vw;
+        height: 80vh;
+        padding: 5vh 3vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        h4{
+            font-size: 22px;
+        }
+        p{
+            font-size: 20px;
+        }
+    }
+    .detailed_info_container{
+        padding-left: 8vw;
+    }
+    .detailed_collection_container{
+        padding-right: 8vw;
+    }
+}

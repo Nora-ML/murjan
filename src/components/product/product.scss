@@ -2,7 +2,15 @@
     width: 100vw;
     height:auto;
     position: relative;
-    /*top: 10vh;;
-     left: 5vw;
-    right: 5vw; */
+
+    top: 0vh;;
+     left: 0vw;
+    right: 0vw;
+
+    .product_detail_page_container{
+        width: 100vw;
+        height: 100vh;
+    
+        position: absolute;
+    }    
 }

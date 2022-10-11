@@ -1,0 +1,32 @@
+
+.product_image_container{
+    width: 55vw;
+    height: 100vh;
+    overflow: hidden;
+    position: absolute;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+    top: 0vh;
+    left: 0;
+    
+    .shop_item-img-default{
+        width: 55vw;
+        height: 110vh;
+        background-color: #f3eadd;
+        
+        top: -10vh;
+        left: 0;
+        position: absolute;
+        object-fit: contain;
+    }
+    .shop_item-img{
+        background-color: #f3eadd;
+        width: 55vw;
+        height: 110vh;
+        left: 0;
+        position: absolute;
+        object-fit: contain;
+    }
+}

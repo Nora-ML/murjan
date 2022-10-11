@@ -1,8 +1,8 @@
 import React, {useRef,useEffect} from "react";
-import image1 from "../../images/image1.webp";
-import image2 from "../../images/image2.webp";
-import image3 from "../../images/image3.webp";
-import image4 from "../../images/IMG_6346_1500x.webp";
+import image1 from "../../images/earing_1(1).png";
+import image4 from "../../images/bangle_1(1).png";
+import image2 from "../../images/bangles_2(1).png";
+import image3 from "../../images/necklace_1(2).png";
 import { Parallax, ParallaxLayer } from "../../parallax";
 import "./product_cat.scss";
 import gsap from "gsap";

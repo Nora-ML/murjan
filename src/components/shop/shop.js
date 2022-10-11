@@ -1,6 +1,7 @@
 import React from "react";
 import Nav from "../navigation/Navigation.js"
-import ShopNav from "./shop_nav/shop_nav";
+import ShopHero from "./shop_hero/shop_hero";
+import ShopNav from "./shop_nav/shop_nav.js";
 import ShopItems from "./shop_items/shop_items";
 import "./shop.scss";
 
@@ -15,10 +16,12 @@ import "./shop.scss";
 
 const Shop = () => {
     return (
-        <div className="shop_page_container special_blush">
-             <Nav/>
-            {/*<ShopNav/> */}
-            <ShopItems/>
+
+        <div className="shop_page_container">
+                <Nav/>   
+                <ShopHero />
+                <ShopNav/>
+                <ShopItems/>
         </div>
     )
 }

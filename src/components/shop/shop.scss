@@ -1,9 +1,13 @@
 .shop_page_container{
-    width: 90vw;
+    width: 100vw;
     height: auto;
-    border: #ffedd7 solid 1px;
-    position: absolute;
+
+    //background-color: red;
+    position: relative;
     top: 0vh;
-    left: 5vw;
-    right: 5vw;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
 }

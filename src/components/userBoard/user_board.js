@@ -2,10 +2,12 @@ import React, { useContext } from "react";
 import Nav from "../navigation/Navigation";
 import { UserContext } from "../../context/userContext";
 import { fetchApi } from "../../helpers";
-import background from "../../images/Foundationchain_gold_thick.png";
-import background1 from "../../images/HG-bracelet-Chubby_stone_inlay-1.png";
-import background2 from "../../images/stardust_pendantnecklace_smallrev.png";
-import background3 from "../../images/tennisnecklace_wide1_4a143466-cc04-4d93-b050-60bcf0633fd4.png";
+import image1 from "../../images/earing_1(1).png";
+import image from "../../images/bangle_1(1).png";
+import image2 from "../../images/bangles_2(1).png";
+import image3 from "../../images/necklace_1(2).png";
+import image4 from "../../images/necklace_3(2).png";
+
 import "./user_board.scss";
 
 const UserBoard = () => {
@@ -81,25 +83,25 @@ const UserBoard = () => {
 					<div
 						className="favourites_image"
 						style={{
-							backgroundImage: `url(${background})`,
+							backgroundImage: `url(${image})`,
 						}}
 					></div>
 					<div
 						className="favourites_image"
 						style={{
-							backgroundImage: `url(${background1})`,
+							backgroundImage: `url(${image1})`,
 						}}
 					></div>
 					<div
 						className="favourites_image"
 						style={{
-							backgroundImage: `url(${background2})`,
+							backgroundImage: `url(${image2})`,
 						}}
 					></div>
 					<div
 						className="favourites_image"
 						style={{
-							backgroundImage: `url(${background1})`,
+							backgroundImage: `url(${image1})`,
 						}}
 					></div>
 
@@ -107,25 +109,25 @@ const UserBoard = () => {
 					<div
 						className="favourites_image"
 						style={{
-							backgroundImage: `url(${background3})`,
+							backgroundImage: `url(${image3})`,
 						}}
 					></div>
 					<div
 						className="favourites_image"
 						style={{
-							backgroundImage: `url(${background2})`,
+							backgroundImage: `url(${image2})`,
 						}}
 					></div>
 					<div
 						className="favourites_image"
 						style={{
-							backgroundImage: `url(${background2})`,
+							backgroundImage: `url(${image2})`,
 						}}
 					></div>
 					<div
 						className="favourites_image"
 						style={{
-							backgroundImage: `url(${background3})`,
+							backgroundImage: `url(${image3})`,
 						}}
 					></div>
 				</div>

@@ -1,31 +1,84 @@
 .nav_container {
-    //border: #ffedd7 solid 1px;
+    //border: #c56e1c solid 1px;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
 
-
-    width: 90vw;
+    width: 100vw;
     height: 10vh;
+    padding: 0 1%;
     position: fixed;
-    top: 0vh;
-    left: 5vw;
-    right: 5vw;
-    z-index: 1000;
-    text-align:center;
-    background-color: transparent;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+
+    //background-color: #bf8738;
+    background-color: #ebdbc4;
+
+/*     &.trans{
+        background-color: transparent;
+    }
+    @media screen and (max-width: 1201px) {
+        font-size: 37px;
+       
+    }
+    @media screen and (max-width: 1025px) {
+        font-size: 34px;
+       
+    }
+    @media screen and (max-width: 770px) {
+        font-size: 31px;
+        letter-spacing: -0.2rem;
+      
+    } */
+   /*  @media screen and (max-width: 480px) {
+        height: 10vh;
+    } */
 
     .nav_container-ul{
+
         padding-inline-start: 0;
         padding-inline-end: 0;
+        margin-block-start: 0.5rem;
+        margin-block-end: 0.5rem;
         list-style: none;
+
+        overflow: hidden;
+        width: calc(100%/3);
         
         display: flex;
         flex-direction: row; 
+        align-items: center;
     
         position: relative;
         
+        &.first{ 
+            justify-content:center;
+            align-items:flex-start;
+            flex-direction: column;       
+
+            .first-2{ 
+                flex-direction: row;
+                position: absolute;
+                min-height: 100%;
+                width: 100%;
+                height: auto;
+                top: 100%;
+                //background-color: rgb(55, 255, 0);
+                
+  
+                .shop-nav{
+                    text-decoration: none;
+                    padding: 5px 10px;
+                    font-size: 18px;
+                    color: inherit;
+                }
+            }
+        }
         
+        &.middle{justify-content: center;}
+        &.last{justify-content:flex-end;}
+
          .nav_container-li{
             text-decoration: none;
             padding: 5px 10px;
@@ -37,6 +90,7 @@
             &.logo{
                 font-size: 24px;
             }
+           
             .search_icon{
                 position: absolute;
                 top: -0.8vh;

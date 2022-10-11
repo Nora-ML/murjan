@@ -8,7 +8,7 @@ import GemHeader from "./gem_type_header/gem_type_header.js"
 
 import Services from "../services_section/services";
 import ProductCat from "../product_category/product_cat";
-import CategoryNav from "../category_nav/category_nav";
+import CategoryNav from "./category_nav/category_nav";
 
 import { Parallax, ParallaxLayer } from "../../parallax";
 

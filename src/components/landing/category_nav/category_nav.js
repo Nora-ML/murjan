@@ -1,9 +1,13 @@
 import React,{useRef,useEffect, useLayoutEffect, useState} from "react";
+import image from "../../../images/bangle_1(1).png";
+import image1 from "../../../images/earing_1(1).png";
+import image2 from "../../../images/bangles_2(1).png";
+import image3 from "../../../images/necklace_1(2).png";
+import image4 from "../../../images/necklace_3(2).png";
+import "./category_nav.scss"
+
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
-import image1 from "../../images/yellow_ring.jpg"
-import image2 from "../../images/pink_ring.jpg"
-import "./category_nav.scss"
 gsap.registerPlugin(ScrollTrigger);
 
 
@@ -112,9 +116,9 @@ const CategoryNav = () => {
                     </div>
                     <div className="cat_images category_nav_images-image1" style={{backgroundImage:`url(${image1})`}}>
                     </div>
-                    <div className="cat_images category_nav_images-image2" style={{backgroundImage:`url(${image1})`}}>
+                    <div className="cat_images category_nav_images-image2" style={{backgroundImage:`url(${image3})`}}>
                     </div> 
-                    <div className="cat_images category_nav_images-image3" style={{backgroundImage:`url(${image1})`}}>
+                    <div className="cat_images category_nav_images-image3" style={{backgroundImage:`url(${image})`}}>
                     </div>
                 </div>
                 <div className={`category_nav_images-container ${necklace}`}>
@@ -124,9 +128,9 @@ const CategoryNav = () => {
                     </div>
                     <div className="cat_images category_nav_images-image1" style={{backgroundImage:`url(${image2})`}}>
                     </div>
-                    <div className="cat_images category_nav_images-image2" style={{backgroundImage:`url(${image2})`}}>
+                    <div className="cat_images category_nav_images-image2" style={{backgroundImage:`url(${image3})`}}>
                     </div> 
-                    <div className="cat_images category_nav_images-image3" style={{backgroundImage:`url(${image2})`}}>
+                    <div className="cat_images category_nav_images-image3" style={{backgroundImage:`url(${image})`}}>
                     </div>
                 </div>
                 <div className={`category_nav_images-container ${bracelet}`}>
@@ -138,7 +142,7 @@ const CategoryNav = () => {
                     </div>
                     <div className="cat_images category_nav_images-image2" style={{backgroundImage:`url(${image2})`}}>
                     </div> 
-                    <div className="cat_images category_nav_images-image3" style={{backgroundImage:`url(${image1})`}}>
+                    <div className="cat_images category_nav_images-image3" style={{backgroundImage:`url(${image3})`}}>
                     </div>
                 </div>
                 <div className={`category_nav_images-container ${watch}`}>
