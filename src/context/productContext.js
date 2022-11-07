@@ -74,7 +74,7 @@ const ProductContextProvider = ({ children }) => {
 							// save all 15 results in local storage with keyword first page and category name
 							// save first 4 in state to be passed to landing page for display in category display section
 							.then((response) => {
-								console.log("ProductContext: 15 items of each Cat");
+								//console.log("ProductContext: 15 items of each Cat");
 
 								// saving first 4 cats in the state as featured items for each cat
 								let arr = [];
@@ -104,7 +104,7 @@ const ProductContextProvider = ({ children }) => {
 								const res = await response.json();
 								return { products: res.products, cat: cat, ind: index };
 							})().then((response) => {
-								console.log("ProductContext: 4 items of each Cat", response);
+								//console.log("ProductContext: 4 items of each Cat", response);
 								if (response) {
 									featuredProducts[response.cat] = response.products;
 								}

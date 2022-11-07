@@ -1,9 +1,8 @@
-import React, { useRef, useEffect, useLayoutEffect, useState } from "react";
+import React, { useRef, useLayoutEffect } from "react";
 import image from "../../../images/graff_chasinglight.webp";
 import image1 from "../../../images/graff_twombly.webp";
 import image2 from "../../../images/graff_signature.jpg";
 import image3 from "../../../images/graff_flower.jpg";
-import image4 from "../../../images/necklace_3(2).png";
 import "./collection.scss";
 
 import gsap from "gsap";

@@ -1,10 +1,4 @@
-import React, {
-	useRef,
-	useEffect,
-	useLayoutEffect,
-	useState,
-	useContext,
-} from "react";
+import React, { useRef, useLayoutEffect, useContext } from "react";
 import image from "../../../images/bangle_1(1).png";
 import image1 from "../../../images/earing_1(1).png";
 import image2 from "../../../images/bangles_2(1).png";
@@ -13,7 +7,7 @@ import image4 from "../../../images/necklace_3(2).png";
 import image5 from "../../../images/ring_1(1).png";
 import image6 from "../../../images/ring_2(1).png";
 import goldEdge from "../../../images/icons/gold-edge-flower6.png";
-import backLace from "../../../images/icons/floral back.png";
+
 import { ProductContext } from "../../../context/productContext";
 import "./category_nav.scss";
 
@@ -25,14 +19,10 @@ const CategoryNav = () => {
 	const app = useRef();
 	const { featured } = useContext(ProductContext);
 	const arrayImages = [image, image1, image2, image3, image4, image5, image6];
-	console.log("featured:", featured);
 
 	useLayoutEffect(() => {
 		let ctx = gsap.context(() => {
 			const section = gsap.utils.toArray(".category_each-container");
-			const headerH = document
-				.querySelectorAll(".cat_header")[0]
-				.getBoundingClientRect().height;
 
 			let tl = gsap.timeline({
 				scrollTrigger: {
@@ -77,7 +67,6 @@ const CategoryNav = () => {
 				.querySelectorAll(".category_each-container")[0]
 				.getBoundingClientRect().height;
 			//const windowInner = window.innerHeight;
-			console.log("windowInner", windowInner);
 
 			const tl = gsap.timeline({});
 
@@ -161,7 +150,9 @@ const CategoryNav = () => {
 					<div className="cat_wrap">
 						{featured &&
 							Object.entries(featured).map(([key, value], index) => (
-								<h1 key={value.id + key} className="cat_header">{key}</h1>
+								<h1 key={value.id + key} className="cat_header">
+									{key}
+								</h1>
 							))}
 					</div>
 				</div>
@@ -176,8 +167,8 @@ const CategoryNav = () => {
 									{value.map((e, index) => (
 										<div key={index} className="cat_image_each">
 											<img
-												src={e.images[0]}
-												//src={arrayImages[Math.floor(Math.random() * 6)]}
+												//src={e.images[0]}
+												src={arrayImages[Math.floor(Math.random() * 6)]}
 												alt=""
 											/>
 										</div>

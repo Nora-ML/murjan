@@ -11,7 +11,7 @@ const SizeContextProvider = ({ children }) => {
 
 		const sizeFunc = () => {
 			let wW = window.innerWidth;
-			console.log("window width", wW);
+			//console.log("window width", wW);
 			if (wW <= 481) {
 				setSize("phone");
 			} else if (wW <= 769 && wW > 481) {
@@ -24,7 +24,7 @@ const SizeContextProvider = ({ children }) => {
 		};
 
 		const delayedCall = () => {
-			console.log("DELAYED CALL");
+			//console.log("DELAYED CALL");
 			clearTimeout(resizeId);
 			resizeId = setTimeout(sizeFunc, 500);
 		};

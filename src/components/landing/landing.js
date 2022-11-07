@@ -1,10 +1,4 @@
-import React, {
-	useRef,
-	useEffect,
-	useState,
-	useContext,
-	useLayoutEffect,
-} from "react";
+import React, { useEffect, useContext } from "react";
 import Nav from "../navigation/Navigation";
 import Hero from "./hero/hero";
 import PostHero from "./post_hero/post_hero";
@@ -14,8 +8,6 @@ import Collection from "./collection/collection";
 import PreLoader from "./pre_loader/pre_loader";
 import { ProductContext } from "../../context/productContext";
 
-import { Parallax, ParallaxLayer } from "../../parallax";
-
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import "./landing.scss";
@@ -23,10 +15,7 @@ import "./landing.scss";
 gsap.registerPlugin(ScrollTrigger);
 
 const Landing = () => {
-	console.log("Landing page");
-
 	const { done } = useContext(ProductContext);
-	console.log("Landing page done", done);
 
 	//const [load, setLoad] = useState(0);
 
@@ -39,7 +28,6 @@ const Landing = () => {
 
 	useEffect(() => {
 		if (done) {
-			console.log("SCRIPT useEffect");
 			const script = document.createElement("script");
 
 			script.src = "loco.js";

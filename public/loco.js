@@ -17,7 +17,9 @@ const collCont_height = collContainer.getBoundingClientRect().height;
 const endCollCont = collCont_top + collCont_height * 0.6;
 const motion = window.matchMedia("(prefers-reduced-motion:no-preference");
 //const large = window.matchMedia("(min-width:600px");
-console.log("coll collContainer", collContainer.getBoundingClientRect());
+
+
+
 if (motion.matches /* & large.matches */) {
 	let currentScroll = 0;
 	let aimScroll = 0;
@@ -25,31 +27,20 @@ if (motion.matches /* & large.matches */) {
 	const changeScroll = () => {
 		//console.log("CHange Scroll");
 		bodyTag.style.height = main.offsetHeight + "px";
-
-		//console.log("catContaine Bounding client,",catContainer.getBoundingClientRect());
-
 		// pinning the category horizontal container
 		if (currentScroll >= catCont_top && currentScroll <= endCatCont) {
-			console.log("FROZEN LOCO SCROLL for CAT CONATINER");
-			/* console.log(
-				"currentScroll,",
-				currentScroll,
-				"  catCont_top",
-				catCont_top,
-				"catCont_height",
-				endCatCont
-			); */
+			//console.log("FROZEN LOCO SCROLL for CAT CONATINER");
 			catContainer.style.position = "fixed";
 			catContainer.style.top = "0px";
 			//page4.style.position = "absolute";
 			page4.style.top = "0";
 		} else if (currentScroll >= endCatCont && currentScroll <= endCollCont) {
-			console.log("FROZEN  COLLECTIOOOOOOOOOOOn,", currentScroll);
+			//console.log("FROZEN  COLLECTIOOOOOOOOOOOn,", currentScroll);
 			catContainer.style.position = "fixed";
 			page4.style.position = "fixed";
 			page4.style.top = "0px";
 		} else {
-			console.log("FROZEN  OTHEEEERRRZZZZZ");
+			//console.log("FROZEN  OTHEEEERRRZZZZZ");
 			catContainer.style.position = "relative";
 			page4.style.position = "absolute";
 			page4.style.top = "1000px";
