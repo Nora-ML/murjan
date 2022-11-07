@@ -6,16 +6,20 @@ import reportWebVitals from "./reportWebVitals";
 import UserContextProvider from "./context/userContext";
 import FilterContextProvider from './context/filterContext';
 import ProductContextProvider from './context/productContext';
+import SizeContextProvider from "./context/sizeContext";
+
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
 	<BrowserRouter>
-		<UserContextProvider>
-			<ProductContextProvider>
+		<ProductContextProvider>
+			<UserContextProvider>
 				<FilterContextProvider>
-					<App />
+					<SizeContextProvider>
+						<App />
+					</SizeContextProvider>
 				</FilterContextProvider>
-			</ProductContextProvider>
-		</UserContextProvider>
+			</UserContextProvider>
+		</ProductContextProvider>
 	</BrowserRouter>
 );
 

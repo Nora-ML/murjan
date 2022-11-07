@@ -1,50 +1,93 @@
-import React,{useEffect,useRef} from "react";
-import myVideo from "../../../images/videos/graff2.mp4";
-
+import React, { useEffect, useRef, useContext } from "react";
+// Importing Context
+import { SizeContext } from "../../../context/sizeContext";
+// Assets
+import smallVideo from "../../../images/videos/Murjan_small_1.mp4";
+import largeVideo from "../../../images/videos/Murjan.mp4";
+// stylesheet and animation library
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import "./hero.scss";
 
 gsap.registerPlugin(ScrollTrigger);
 
-
 const Hero = () => {
+	const hero = useRef();
 
-	const heroRefs = useRef(null);
+	const size = useContext(SizeContext);
+	console.log("size from context,", size);
 
 	useEffect(() => {
-		console.log(heroRefs)
+		let ctx = gsap.context(() => {
+			const tl = gsap.timeline({});
 
-		const tl = gsap.timeline({
-			scrollTrigger: {
-				trigger:heroRefs.current,
-				pin: true,
-				start: 'top top',
-				end: 'bottom-=100 top+=100',
-				//markers: true,
-				pinSpacing: false,
-				toggleActions:"play play none reverse", 
-				scrub:true,
-			}
-		})
+			// for the on load 2 colors gradual "hero" reveal effect
 
-		tl.from(heroRefs.current, {
-			scale:1,
-		})
-		tl.to(heroRefs.current, {
-			yPercent: -100,
-			scale:1.2,
-			ease:"none",
-			duration: 1,
-		})
-	}, [])
+			// 1- reveal the hero_container
+			tl.fromTo(
+				".hero_container",
+				{
+					clipPath: "inset(100% 0% 0% 0%)",
+				},
+				{
+					clipPath: "inset(0% 0% 0% 0%)",
+					duration: 2,
+					delay: 0.3,
+				}
+			)
+				// 1- this animation runs along with the previous animation
+				// 2- reveal the hero_video
+				// 3- (slide + downward scale) effect as video is revealed
+				// 4- for a parallax effect pin the video after animation is completed
+				.fromTo(
+					".hero_video",
+					{
+						clipPath: "inset(100% 0% 0% 0%)",
+						yPercent: 20,
+						scale: 1.2,
+					},
+					{
+						onComplete: () => {
+							tl.to(".hero_video", {
+								scrollTrigger: {
+									pin: true,
+									trigger: ".hero_video",
+									/* markers: {
+										startColor: "blue",
+										endColor: "blue",
+										fontSize: "14px",
+									}, */
+									start: "top top",
+									end: "bottom+=150% top",
+								},
+							});
+						},
+						clipPath: "inset(0% 0% 0% 0%)",
+						duration: 2,
+						delay: 0.1,
+						yPercent: 0,
+						scale: 1,
+					},
+					"<"
+				);
+		}, hero);
+
+		return () => ctx.revert();
+	}, []);
 
 	return (
-		<div ref={heroRefs}  className="hero_container special_blush">
-			{/* <div className="hero_logo">
-				<h1>This is LOGO</h1>
-			</div> */}
-			<video  src={myVideo} type="video/mp4" className="hero_video" /* autoPlay loop muted */ />
+		<div ref={hero} className="hero_section_container">
+			<div className="hero_container">
+				<video
+					src={size && size === "phone" ? smallVideo : largeVideo}
+					type="video/mp4"
+					className="hero_video"
+					autoPlay
+					loop
+					muted
+				/>
+			</div>
+
 			{/* <div className="hero_subheaders">
 				<h1>This is Header 1</h1>
 				<h3>Subheader 1</h3>

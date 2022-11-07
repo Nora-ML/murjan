@@ -1,34 +1,70 @@
 .detailed_page_container{
-    height: 100vh;
-    width: 100vw;
 
-    top: 100vh;
-    position: absolute;
+    overflow: hidden;
+    
+    width: 100%;
+    height: 100vh;
+
 
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
 
+    @media (max-width:769px) {
+        background-color: #f3eadd26;
+       
+        max-height: 100vh;
+        height: auto;
+
+        flex-direction: column; 
+    }
+
     .item_details{
-        width: 50vw;
-        height: 80vh;
-        padding: 5vh 3vw;
+       
+        text-transform: none;
+        overflow: hidden;
+
+        width: 50%;
+        height: 80%;
+        padding: 5% 4%;
+
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: flex-start;
+
+        &--info{
+            padding-left: 8vw;
+        }
+        &--collection{
+            padding-right: 8vw;
+        }
+            @media (max-width:769px) {
+              
+
+                width: 85%;
+                max-height: 50%;
+                height: auto;
+
+                padding: 3% 0%;                
+                
+            }
+
         h4{
-            font-size: 22px;
+            align-self: flex-start;
+            font-size: clamp(14px,1.6vw,22px);
+            font-weight: 400;
+            margin-block-start: 0.5vw;
+            margin-block-end: 3%;
         }
         p{
-            font-size: 20px;
+            font-size: clamp(11px,1.4vw,14px);
+            font-weight: 300;
+            letter-spacing: 0.05rem;
+            margin-block-start: 0.5vw;
+            margin-block-end: 0.5vw;
         }
     }
-    .detailed_info_container{
-        padding-left: 8vw;
-    }
-    .detailed_collection_container{
-        padding-right: 8vw;
-    }
+
 }

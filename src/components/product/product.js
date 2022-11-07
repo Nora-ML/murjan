@@ -8,15 +8,17 @@ import "./product.scss";
 
 
 const Product = () => {
-    return (
-        <div className="product_page_container">
-            <Nav classN={"trans"} />
-            <div className="product_detail_page_container">
-                <ProductDetails />
-                <ProductImages/>
-            </div>
-            <Detailed/>
-        </div>
-    )
+    window.scrollTo(0, 0);
+
+		return (
+			<div className="product_page_container">
+				<Nav classN={"trans"} />
+				<div className="product_detail_page_container">
+					<ProductImages />
+					<ProductDetails />
+				</div>
+				<Detailed />
+			</div>
+		);
 }
 export default Product;

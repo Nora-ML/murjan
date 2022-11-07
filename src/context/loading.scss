@@ -1,4 +1,4 @@
-.loading-wrapper{
+/* .loading-wrapper{
     background-color:#0f0c2992;
 
     display: flex;
@@ -14,4 +14,33 @@
 
         text-align: center;
     }
-}
+} */
+
+  .text-container{
+    width:100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .text {
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 3rem;
+        overflow: hidden;
+
+        h1 {
+
+            font-size: 3rem;
+            color: #282828;
+            transform: translateY(45px);
+          }
+      }
+  }
+  
+
+  
+
+  

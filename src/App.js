@@ -1,4 +1,5 @@
 import "./App.css";
+import React, { useLayoutEffect, useState } from "react";
 import { Route, Routes } from "react-router-dom";
 import Landing from "./components/landing/landing";
 import SignIn from "./components/sign-in/sign_in";
@@ -7,10 +8,21 @@ import UserBoard from "./components/userBoard/user_board";
 import AdminBoard from "./components/adminBoard/admin_board";
 import Shop from "./components/shop/shop";
 import Product from "./components/product/product";
-import { UserRoute, AdminRoute } from "./components/routesAccess";
+import { UserRoute, AdminRoute, ScrollToTop } from "./components/routesAccess";
 import Activate from "./components/activateAccount/activate_acc";
+import PreLoader from "./components/landing/pre_loader/pre_loader";
+
 
 const App = () => {
+	const [state, setState] = useState(true);
+
+	/* useLayoutEffect(() => {
+		setTimeout(() => {
+			setState(false)
+		},1000)
+	},[])
+ */
+
 	return (
 		<Routes>
 			<Route path="/" element={<Landing />} />
@@ -27,6 +39,6 @@ const App = () => {
 			<Route path="/activate/:id" element={<Activate />} />
 		</Routes>
 	);
-};
+};;;;;
 
 export default App;

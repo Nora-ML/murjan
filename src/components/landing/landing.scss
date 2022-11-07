@@ -1,66 +1,65 @@
-.landing_container{
-    border: #ffedd7 solid 1px;
-    background-color: transparent;
+.main_container{
+    position: fixed;
+    //top: 100vh;
+    width: 100vw;
+    //border: 5px red solid;
 
-    position: absolute;
-    top: 10vh;
-    left: 5vw;
-    right: 5vw;
-    width: 90vw;
-   // padding: 0 1vw;
-
-    height:auto;
-
-    display: grid;
-    grid-template-columns: repeat(9,10vw);
-    grid-template-rows: 98vh minmax(100vh,250vh) 85vh 15vh;// 5 pages
-    grid-template-areas:  
-    'a a a a a a a a a '  
-    'b b b b b b b b b ' 
-    'd d d d d d d d d '
-    'e e e e e e e f f '
-    'g g g g g g g g g ';
-
-
-    .gems{
-        grid-area: b;
-
-        background-color: #644b47;
-
-        display: grid;
-        grid-template-columns: repeat(9,10vw);
-        grid-template-rows: 5vh 20vh minmax(100vh,280vh) ;
-        grid-template-areas:
-        ' . . . . . . x x x' 
-        ' q q q q q q x x x' 
-        ' q q q q q q . . .' 
-    }
-
-    .content-2{
-        grid-area: g;
-        height: 150vh;
+    .landing_container{
+        background-color:  #ead4be;
+        overflow-x: hidden;
+     
+        position: relative;
+        top: 0;
         width: 100vw;
+        height:auto;
+    
+        display: grid;
+        grid-template-columns: repeat(10,10vw);
+        grid-template-rows: 
+                clamp(330px,110vh,1400px) //hero
+                clamp(60vh,90vw,1100px) //postHero
+                100vh  //gem-color
+                200vh  // categories
+                250vh  // collection
+                150vh; // footer
+        //row-gap: 5vw;
+        grid-template-areas:  
+        'a a a a a a a a a a '  
+        'b b b b b b b b b b ' 
+        'c c c c c c c c c c ' 
+        'd d d d d d d d d d '
+        'e e e e e e e e e e '
+        'g g g g g g g g g g ';
 
-        background-color: rgba(161, 211, 254, 0.538);
-        .content__text{
-            font-size: 26px;
-            color: rgba(188, 12, 188, 0.608);
-            padding: 10vh 10vw;
-            line-height: 50px;
+        
+    
+      
+    
+        .content-2{
+            grid-area: g;
+            height: 150vh;
+            width: 100vw;
+
+            position: relative;
+    
+            background-color: rgba(161, 211, 254, 0.538);
+            .content__text{
+                font-size: 26px;
+                color: rgba(188, 12, 188, 0.608);
+                padding: 10vh 10vw;
+                line-height: 50px;
+            }
         }
+        .service_container{
+         
+            overflow: hidden;
+            width: 100vw !important;
+     
+        }
+        .categories_container{
+            width: 100vw ;
+        }    
+    
     }
-    .service_container{
-       //background-color: #abedb25c !important;
-        //background-color: transparent;
-        overflow: hidden;
-        width: 100vw !important;
-        //height: 65vh ;
-    }
-    .categories_container{
-        //border:solid 1px rgb(138, 46, 12);
-        //background-color: rgba(131, 72, 66, 0.515);
-        width: 100vw ;
-        //height: 100vh !important;
-    }    
-
 }
+

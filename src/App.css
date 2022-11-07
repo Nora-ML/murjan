@@ -1,4 +1,23 @@
-@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800&family=Noto+Serif+Thai:wght@200;300;400;500;600&family=Cormorant+Infant:wght@400;500;600;700&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800&family=Noto+Serif+Thai:wght@200;300;400;500;600&family=Cormorant+Infant:wght@400;500;600;700&display=swap');
+
+ */
+
+ /* 
+ -- default 
+ background-color:  #e6ccb2;
+ -- darker 2 shades
+ background-color:  #e2c3a5;
+ -- darker 4 shades:
+ background-color:#debb99;
+ --- lighter 1 shades
+ background-color:#e8d0b8;
+  --- lighter 2 shades
+ background-color:#ead4be;
+
+ ------- FONT
+ color:#524335;
+ */
+
 
 
 *{
@@ -6,18 +25,21 @@
  
 }
 body{
+  overscroll-behavior: none;
     margin: 0;
     /* background-color: #410808; */
     /* background-color: #5da2957e; */
     /* background-color: #FFFDFA; */
-    background:  #ebdbc4;
+     background:  #e6ccb2; 
+
+    
     /* color:#D6AD60; */
-    color:#5c3d1e;
+    color:#fffefebc;
     text-transform: uppercase;
     font-size: 16px;
-   /*  font-family: 'Cinzel', serif; */
+    font-family: 'Cinzel', serif;
    /*  font-family: 'Cormorant Infant', serif; */
-    font-family: 'Noto Serif Thai', serif;
+   /*  font-family: 'Noto Serif Thai', serif; */
     overflow-x: hidden;
     /* width: 100vw;
     overflow-x: hidden; */

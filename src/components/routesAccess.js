@@ -1,6 +1,8 @@
 import { UserContext } from "../context/userContext";
-import { Navigate, Outlet } from "react-router-dom";
-import { useContext } from "react";
+import { ProductContext } from "../context/productContext";
+import PreLoader from "./landing/pre_loader/pre_loader";
+import { Navigate, Outlet, useLocation } from "react-router-dom";
+import { useContext, useEffect, useLayoutEffect } from "react";
 
 export const UserRoute = () => {
 	const {
@@ -19,3 +21,4 @@ export const AdminRoute = () => {
 
 	return role === "admin" ? <Outlet /> : <Navigate to="/" />;
 };
+

@@ -1,5 +1,6 @@
 .nav_container {
-    //border: #c56e1c solid 1px;
+    background-color:  #e6ccb2; // default
+
     display: flex;
     flex-direction: row;
 
@@ -10,15 +11,12 @@
     top: 0;
     left: 0;
     right: 0;
-    z-index: 100;
+    z-index: 10;
 
-    //background-color: #bf8738;
-    background-color: #ebdbc4;
-
-/*     &.trans{
+    &.trans{
         background-color: transparent;
     }
-    @media screen and (max-width: 1201px) {
+ /*   @media screen and (max-width: 1201px) {
         font-size: 37px;
        
     }

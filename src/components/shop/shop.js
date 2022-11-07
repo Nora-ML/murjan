@@ -15,6 +15,7 @@ import "./shop.scss";
 
 
 const Shop = () => {
+    console.log("Shop page");
     return (
 
         <div className="shop_page_container">
