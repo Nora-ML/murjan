@@ -61,16 +61,15 @@ const ProductContextProvider = ({ children }) => {
 					const newVsold = localStorage.getItem(`${cat}/page_1`);
 
 					if (!newVsold) {
-						console
-							.log("Fetching first time NOT in Local Storage")(async () => {
-								const response = await fetch(
-									`https://dummyjson.com/products/category/${cat}?skip=0&limit=15`
-								);
+						(async () => {
+							const response = await fetch(
+								`https://dummyjson.com/products/category/${cat}?skip=0&limit=15`
+							);
 
-								const res = await response.json();
+							const res = await response.json();
 
-								return res.products;
-							})()
+							return res.products;
+						})()
 							// save all 15 results in local storage with keyword first page and category name
 							// save first 4 in state to be passed to landing page for display in category display section
 							.then((response) => {
