@@ -85,7 +85,7 @@ const Nav = ({ classN }) => {
 	return (
 		<div className={`nav_container ${classN}`}>
 			<ul className="nav_container-ul first">
-				<Link to="/shop" className="nav_container-li shop-remove">
+				<Link to="" className="nav_container-li shop-remove">
 					<li>Shop</li>
 				</Link>
 				<ul className="nav_container-ul first-2">
@@ -111,7 +111,7 @@ const Nav = ({ classN }) => {
 					/>
 				</Link>
 				{!user && (
-					<Link to="/sign-in" className="nav_container-li">
+					<Link to="" className="nav_container-li">
 						<li>My Account</li>
 					</Link>
 				)}
