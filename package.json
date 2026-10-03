@@ -1,24 +1,31 @@
 {
-  "name": "murjan_next",
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
-  },
-  "dependencies": {
-    "@apollo/client": "^3.8.8",
-    "@apollo/experimental-nextjs-app-support": "^0.5.2",
-    "graphql": "^16.8.1",
-    "gsap": "^3.12.4",
-    "next": "14.0.4",
-    "react": "^18",
-    "react-dom": "^18"
-  },
-  "devDependencies": {
-    "eslint": "^8",
-    "eslint-config-next": "14.0.4"
-  }
+	"name": "murjan",
+	"private": true,
+	"workspaces": [
+		"apps/*",
+		"packages/*"
+	],
+	"engines": {
+		"node": ">=20"
+	},
+	"scripts": {
+		"dev": "npm run dev -w apps/storefront",
+		"build": "npm run build -w apps/storefront",
+		"start": "npm run start -w apps/storefront",
+		"lint": "eslint .",
+		"format": "prettier --write .",
+		"format:check": "prettier --check .",
+		"test": "vitest run",
+		"test:e2e": "npm run test:e2e -w apps/storefront"
+	},
+	"devDependencies": {
+		"@eslint/eslintrc": "^3.3.7",
+		"@eslint/js": "^9.39.5",
+		"eslint": "^9.39.5",
+		"eslint-config-next": "^15.5.27",
+		"eslint-config-prettier": "^10.1.8",
+		"globals": "^16.5.0",
+		"prettier": "^3.9.9",
+		"vitest": "^3.2.7"
+	}
 }
