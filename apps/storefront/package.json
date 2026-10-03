@@ -1,0 +1,24 @@
+{
+	"name": "@murjan/storefront",
+	"version": "0.1.0",
+	"private": true,
+	"scripts": {
+		"dev": "next dev",
+		"build": "next build",
+		"start": "next start",
+		"lint": "next lint",
+		"test:e2e": "playwright test"
+	},
+	"dependencies": {
+		"@apollo/client": "^3.14.1",
+		"@apollo/experimental-nextjs-app-support": "0.11.11",
+		"graphql": "^16.8.1",
+		"gsap": "^3.12.4",
+		"next": "15.5.27",
+		"react": "^19.0.0",
+		"react-dom": "^19.0.0"
+	},
+	"devDependencies": {
+		"@playwright/test": "^1.63.0"
+	}
+}
