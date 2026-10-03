@@ -7,6 +7,7 @@ import {
 //import { SEARCH_PRODUCTS } from "../../components/helpers/search.js";
 //main Components
 import ProductAdd from "@/app/components/Admin/AddProduct";
+import { ApolloWrapper } from "@/app/lib/apollo_provider";
 //sub components
 import Table from "@/app/components/general/Table.js";
 import Pagination from "@/app/components/general/pagination";
@@ -41,14 +42,18 @@ const Admin_Product = async (props) => {
 		data: { products },
 		loading,
 		error,
-	} = await getClient().query({
-		query: PRODUCTS_ADMIN_PAGE,
-		variables: { limit, offset },
-	});
+	} = await getClient()
+		.query({
+			query: PRODUCTS_ADMIN_PAGE,
+			variables: { limit, offset },
+		})
+		.catch((error) => ({ data: {}, error }));
 
 	const {
-		data: { productCount },
-	} = await getClient().query({ query: ALL_PRODUCTS_COUNT });
+		data: { productCount = 0 },
+	} = await getClient()
+		.query({ query: ALL_PRODUCTS_COUNT })
+		.catch(() => ({ data: {} }));
 
 	let productList = products || LIST_PRODUCTS_TEMP;
 
@@ -89,7 +94,9 @@ const Admin_Product = async (props) => {
 				PAGES
 			</Dash_FooterStyle> */}
 
-			<ProductAdd />
+			<ApolloWrapper>
+				<ProductAdd />
+			</ApolloWrapper>
 		</>
 	);
 };

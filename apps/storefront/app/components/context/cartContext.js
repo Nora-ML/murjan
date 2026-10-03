@@ -1,22 +1,24 @@
 "use client";
-import { createContext, useReducer, useState } from "react";
+import { createContext, useEffect, useReducer, useState } from "react";
 import { sumItems } from "./cartReducer";
 import cartReducer from "./cartReducer";
 
 export const CartContext = createContext();
 
-const storedCart =
-	typeof window !== "undefined" ? localStorage.getItem("cart") : null;
-const cartFromStorage = storedCart ? JSON.parse(storedCart) : [];
-
-const initialState = {
-	cartItems: cartFromStorage,
-	...sumItems(cartFromStorage),
-};
+// Server and first client render both start empty; the stored cart loads after
+// mount so hydration matches.
+const initialState = { cartItems: [], ...sumItems([]) };
 
 const CartContextProvider = ({ children }) => {
 	const [state, dispatch] = useReducer(cartReducer, initialState);
 	const [inCart, setInCart] = useState(false);
+
+	useEffect(() => {
+		const storedCart = localStorage.getItem("cart");
+		if (storedCart) {
+			dispatch({ type: "HYDRATE", payload: { items: JSON.parse(storedCart) } });
+		}
+	}, []);
 
 	const addToCart = (product) =>
 		dispatch({ type: "ADD_ITEM", payload: product });

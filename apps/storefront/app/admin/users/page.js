@@ -10,9 +10,11 @@ const Admin_User = async () => {
 		data: { users },
 		error,
 		loading,
-	} = await getClient().query({ query: LIST_USERS });
+	} = await getClient()
+		.query({ query: LIST_USERS })
+		.catch((error) => ({ data: {}, error }));
 
-	const colHeaders = users.length > 0 ? Object.keys(users[0]).slice(1) : false;
+	const colHeaders = users?.length > 0 ? Object.keys(users[0]).slice(1) : false;
 
 	console.log("[USERS COLHEADER]", colHeaders);
 	return (

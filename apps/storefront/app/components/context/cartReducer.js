@@ -30,6 +30,12 @@ const cartReducer = (state, action) => {
 		: "false";
 
 	switch (action.type) {
+		case "HYDRATE":
+			return {
+				...state,
+				cartItems: action.payload.items,
+				...sumItems(action.payload.items),
+			};
 		case "ADD_ITEM":
 			// check if item in cart
 			if (!isInCart) {

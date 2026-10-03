@@ -31,6 +31,17 @@ describe("cartReducer", () => {
 		}
 	});
 
+	it("hydrates the cart from stored items", () => {
+		const stored = [{ ...ring, quantity: 2, total: 200 }];
+		const state = cartReducer(empty, {
+			type: "HYDRATE",
+			payload: { items: stored },
+		});
+		expect(state.cartItems).toEqual(stored);
+		expect(state.itemCount).toBe(2);
+		expect(state.total).toBe(200);
+	});
+
 	it("removes an item", () => {
 		const added = cartReducer(empty, { type: "ADD_ITEM", payload: ring });
 		const removed = cartReducer(added, { type: "REMOVE_ITEM", payload: ring });

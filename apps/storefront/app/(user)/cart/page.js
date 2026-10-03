@@ -18,7 +18,7 @@ const CartPage = () => {
 	console.log("[CART PAGE] :cartItems", cartItems);
 
 	let cart =
-		cartItems && cartItems.length > 1
+		cartItems && cartItems.length > 0
 			? cartItems.map((item) => {
 					return {
 						...item,
